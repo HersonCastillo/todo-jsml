@@ -1,4 +1,4 @@
-const Button = ({ child, onClick, ...rest }) => ({
+const Button = ({ child, onClick, style, classes = [], ...rest }) => ({
   tag: 'button',
   events: [
     {
@@ -6,18 +6,12 @@ const Button = ({ child, onClick, ...rest }) => ({
       handler: onClick,
     }
   ],
-  style: {
-    backgroundColor: '#ddd',
-    padding: '10px',
-    margin: '5px',
-    outlineStyle: 'none',
-    borderStyle: 'none',
-    borderRadius: '5px',
-    cursor: 'pointer',
-    fontWeight: '900',
-    fontFamily: 'sans-serif',
-    textTransform: 'uppercase',
-  },
+  classes: [
+    'btn',
+    'btn-primary',
+    ...classes,
+  ],
+  style,
   child,
   ...rest,
 });

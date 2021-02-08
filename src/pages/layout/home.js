@@ -5,6 +5,7 @@ import List from '../../components/list/list.js';
 import Br from '../../components/br.js';
 import Button from '../../components/button.js';
 import Container from '../../components/container.js';
+import Icon from '../../components/icon.js';
 
 import Storage from '../../config/storage.js';
 
@@ -63,12 +64,17 @@ const HomePage = ({ changeDetection }) => {
                           Container({
                             child: [
                               Button({
-                                child: Span('Edit'),
+                                child: Icon('edit'),
                                 onClick: () => onEditTask(task.id),
+                                classes: ['btn-info'],
+                                style: {
+                                  marginRight: '10px'
+                                },
                               }),
                               Button({
-                                child: Span('Delete'),
+                                child: Icon('trash'),
                                 onClick: () => onDeleteTask(task.id),
+                                classes: ['btn-danger'],
                               }),
                             ],
                           }),

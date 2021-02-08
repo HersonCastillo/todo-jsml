@@ -58,6 +58,7 @@ const EditTaskPage = () => {
           Card({
             title: 'Edit Task',
             child: [
+              Br,
               Form({
                 onSubmit: editTask,
                 child: [
@@ -72,7 +73,6 @@ const EditTaskPage = () => {
                     label: 'Description',
                     value: description,
                   }),
-                  Br,
                   Br,
                   Button({
                     child: Span('Edit Task'),

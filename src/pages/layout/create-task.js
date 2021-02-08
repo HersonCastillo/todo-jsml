@@ -43,6 +43,7 @@ const CreateTaskPage = () => {
           Card({
             title: 'Create Task',
             child: [
+              Br,
               Form({
                 onSubmit: createTask,
                 child: [
@@ -58,18 +59,17 @@ const CreateTaskPage = () => {
                     value: '',
                   }),
                   Br,
-                  Br,
                   Button({
                     child: Span('Create Task'),
                     type: 'submit'
-                  })
+                  }),
                 ],
               }),
             ],
-          })
-        ]
-      })
-    ]
+          }),
+        ],
+      }),
+    ],
   };
 };
 

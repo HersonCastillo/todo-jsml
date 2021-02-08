@@ -5,13 +5,7 @@ const CardContent = ({ child, title }) => ({
   },
   child: [
     ({
-      tag: 'span',
-      style: {
-        fontWeight: 'bold',
-        display: 'block',
-        marginBottom: '15px',
-        fontSize: '1.3em',
-      },
+      tag: 'h1',
       child: title,
     }),
     ...child,

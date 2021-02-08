@@ -47,7 +47,7 @@ class Routing {
     const { routes } = this;
     const notFound = routes.find((route) => (route.path.includes('**')));
     const currentPage = routes.find((route) => (
-      route.path.includes(currentRoute))
+      route.path === currentRoute)
       || (Boolean(route.runOnEmpty) && !currentRoute)
     );
 
